@@ -1,10 +1,10 @@
 import { View, StyleSheet } from "react-native";
 import { Text } from "react-native-elements";
 
-export default function HomeScreen() {
+export default function CalendarScreen() {
   return (
     <View style={styles.container}>
-      <Text h3>Home</Text>
+      <Text h3>Calendar Features Coming Soon</Text>
     </View>
   );
 }
@@ -14,16 +14,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 20,
-    backgroundColor: "white",
-  },
-  subtitle: {
-    textAlign: "center",
-    marginBottom: 20,
-    color: "gray",
-  },
-  button: {
-    backgroundColor: "#007AFF",
-    width: 200,
   },
 });
