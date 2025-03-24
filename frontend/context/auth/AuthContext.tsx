@@ -3,6 +3,8 @@ import { Button } from "react-native"
 import * as AuthSession from "expo-auth-session"
 import AsyncStorage from "@react-native-async-storage/async-storage"
 import { ReactNode } from "react"
+import { SCHWAB_CLIENT_ID, SCHWAB_CLIENT_SECRET, REDIRECT_URI as ENV_REDIRECT_URI } from "@env"
+
 
 interface AuthContextType {
   userAccessToken: { accessToken: string } | null
@@ -15,11 +17,11 @@ interface AuthProviderProps {
 }
 
 // schwab API credentials
-const CLIENT_ID = "Y4UOnTNjskmABMcvh6E1qiaOKOAV8cA1"
-const CLIENT_SECRET = "hKEarRAbpdjcRSjj"
+const CLIENT_ID = SCHWAB_CLIENT_ID;
+const CLIENT_SECRET = SCHWAB_CLIENT_SECRET;
 export const REDIRECT_URI = AuthSession.makeRedirectUri({
   scheme: "expo-UI",
-  path: "redirect",
+  path: ENV_REDIRECT_URI.replace("expo-UI://", ""),
 })
 console.log("REDIRECT_URI", REDIRECT_URI)
 
