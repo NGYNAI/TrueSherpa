@@ -1,12 +1,14 @@
-import { View, StyleSheet } from "react-native";
-import { Text } from "react-native-elements";
+import { View, StyleSheet } from "react-native"
+import { Text } from "react-native-elements"
+import { REDIRECT_URI } from "../../context/auth/AuthContext"
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text h3>Home</Text>
+      <Text style={styles.subtitle}>{REDIRECT_URI}</Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -26,4 +28,4 @@ const styles = StyleSheet.create({
     backgroundColor: "#007AFF",
     width: 200,
   },
-});
+})

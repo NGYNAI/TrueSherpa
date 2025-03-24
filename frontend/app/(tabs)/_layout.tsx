@@ -1,5 +1,5 @@
-import { Tabs } from "expo-router";
-import { MaterialIcons } from "@expo/vector-icons";
+import { Tabs } from "expo-router"
+import { MaterialIcons } from "@expo/vector-icons"
 
 export default function TabLayout() {
   return (
@@ -41,5 +41,5 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
-  );
+  )
 }
