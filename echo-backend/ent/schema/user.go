@@ -2,6 +2,7 @@ package schema
 
 import (
 	"entgo.io/ent"
+	"entgo.io/ent/schema"
 	"entgo.io/ent/schema/field"
 	"entgo.io/contrib/entgql"	
 )
@@ -24,4 +25,17 @@ func (User) Fields() []ent.Field {
 // Edges of the User.
 func (User) Edges() []ent.Edge {
 	return nil
+}
+
+func (User) Annotations() []schema.Annotation {
+    return []schema.Annotation{
+        // entgql.QueryField() automatically creates queries like "user" or "users"
+        entgql.QueryField(),
+
+        // Or enable auto-create/update mutations:
+        // entgql.Mutations(entgql.Create(), entgql.Update()),
+
+        // If you want Relay/Pagination, you can add entgql.RelayConnection()
+        // entgql.RelayConnection(),
+    }
 }
